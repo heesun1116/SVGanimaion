@@ -1,0 +1,106 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    position: relative;
+    cursor: none;
+}
+
+header{
+    position: absolute;
+    left: 3%;
+    top: 2%;
+    transform: translate(-3%, -2%);
+} 
+header a, header a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+
+#right_wheel, #left_wheel{
+    animation: wheel 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#men_bike{  
+    animation: bike 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+#hat{
+    animation: hat 1s ease-in infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;    
+}
+/* cursor */
+.cursor{
+position: absolute;
+transform: translate(-50%,-50%);
+pointer-events: none;
+z-index: 10;
+transform-origin: 100% 100%; 
+}
+.cursor i{
+    font-size: 30px;
+    color: #54546c;
+}
+.link-grow{
+    transform: scale(2);
+    background-color: #9face6;
+    border-radius: 50%;
+}
+.hoverd-link{
+    color: #FFF;
+
+}
+.logo_span_link{
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes bike{
+    form{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
+
+@keyframes hat{
+    from{
+        transform: translateY(0%) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(28%) rotateZ(30deg);
+    }
+}
+
+/* morphing */
+.sun{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 2;
+}
+.sun svg{
+    width: 70px;
+    height: 70px;
+}

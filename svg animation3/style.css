@@ -1,0 +1,171 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    text-align: center;
+    position: relative;
+    cursor: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+header{
+    position: absolute;
+    left: 3%;
+    top: 2%;
+    transform: translate(-3%, -2%);
+} 
+header a, header a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* cursor */
+.cursor{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 10;
+    transform-origin: 100% 100%; 
+    }
+.cursor i{
+    font-size: 30px;
+    color: #54546c;
+}
+.link-grow{
+    transform: scale(2);
+    background-color: #9face6;
+    border-radius: 50%;
+}
+.hoverd-link{
+    color: #FFF;
+
+}
+.logo_span_link{
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* morphing */
+.sun{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 2;
+}
+.sun svg{
+    width: 70px;
+    height: 70px;
+}
+
+
+/* svg img */
+.svg_img{
+display: block;
+margin-top: 200px;
+}
+
+
+
+/* svg animation */
+#ball1{
+    animation: ball1 2s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;  
+}
+#ball3{
+    animation: ball3 2s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;  
+}
+#ball2{
+    animation: ball2 1.5s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box; 
+}
+#question{
+    animation: question 2s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;    
+}
+#squar1{
+    animation: squar1 2.5s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+#square2{
+    animation: squar2 2.5s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+#leaf_line,#leaf{
+    animation: leaf 2.5s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box; 
+}
+@keyframes leaf{
+    from{
+        transform: rotateZ(0);
+    }
+    to{
+        transform: rotateZ(20deg) ;
+    }
+}
+@keyframes squar1{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(20px) ;
+    }
+}
+@keyframes squar2{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-20px) ;
+    }
+}
+@keyframes ball3{
+    from{
+        transform: translateY(0%) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(50%) rotateZ(180deg);
+    }
+}
+@keyframes ball2{
+    from{
+        transform: translateY(0%) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(-50%) rotateZ(-280deg);
+    }
+}
+
+@keyframes ball1{
+    from{
+        transform: translateX(0%) rotateZ(0deg);
+    }
+    to{
+        transform: translateX(-50%) rotateZ(-180deg);
+    }
+}
+@keyframes question{
+    0%{
+        transform: translateY(10%) rotateZ(0deg);
+    }
+    50%{
+        transform: translateY(-10%) rotateZ(10deg);
+    }
+    100%{
+        transform: translateY(-20%) rotateZ(-10deg);
+    }
+}

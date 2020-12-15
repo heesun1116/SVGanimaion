@@ -1,0 +1,170 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    text-align: center;
+    position: relative;
+    cursor: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+header{
+    position: absolute;
+    left: 3%;
+    top: 2%;
+    transform: translate(-3%, -2%);
+} 
+
+
+/* cursor */
+.cursor{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 10;
+    transform-origin: 100% 100%; 
+    }
+.cursor i{
+    font-size: 30px;
+    color: #54546c;
+}
+.link-grow{
+    transform: scale(2);
+    background-color: #9face6;
+    border-radius: 50%;
+}
+.hoverd-link{
+    color: #FFF;
+
+}
+.logo_span_link{
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header a, header a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* morphing */
+.sun{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 2;
+}
+.sun svg{
+    width: 70px;
+    height: 70px;
+}
+
+
+/* svg img */
+.svg_img{
+display: block;
+margin-top: 0PX;
+}
+
+#tail_change{
+    animation: tail 1.5s ease-in infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;    
+}
+#ear, #ear_change{
+    animation: ear 1s ease-in infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;    
+}
+.ball6,.ball8{
+    animation: ball 2s ease infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;  
+}
+.ball4,.ball2{
+    animation: ball 1.5s ease-in-out infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;  
+}
+@-webkit-keyframes snowflakes-fall{
+    0%{
+        transform: translateY(-10%);
+    }
+    100%{
+        text-replace: translateY(100%);
+    }
+}
+
+@keyframes snowflakes-fall{
+    0%{
+        transform: translateY(-10%);
+    }
+    100%{
+        text-replace: translateY(100%);
+    }
+}
+
+#snowflake{
+    position:fixed;
+    z-index:-9999;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:default;
+    -webkit-animation-name:snowflakes-fall;
+    -webkit-animation-duration:5s,3s;
+    -webkit-animation-timing-function:linear,ease-in-out;
+    -webkit-animation-iteration-count:infinite,infinite;
+    -webkit-animation-play-state:running,running;
+    animation-name:snowflakes-fall;
+    animation-duration:5s,3s;
+    animation-timing-function:linear,ease-in-out;
+    animation-iteration-count:infinite,infinite;
+    animation-play-state:running,running}
+    #snowflake:nth-of-type(0){-webkit-animation-delay:0s,0s;animation-delay:0s,0s}
+    #snowflake:nth-of-type(1){-webkit-animation-delay:1s,1s;animation-delay:1s,1s}
+    #snowflake:nth-of-type(2){-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}
+    #snowflake:nth-of-type(3){-webkit-animation-delay:4s,2s;animation-delay:4s,2s}
+    #snowflake:nth-of-type(4){-webkit-animation-delay:2s,2s;animation-delay:2s,2s}
+    #snowflake:nth-of-type(5){-webkit-animation-delay:8s,3s;animation-delay:8s,3s}
+    #snowflake:nth-of-type(6){-webkit-animation-delay:6s,2s;animation-delay:6s,2s}
+    #snowflake:nth-of-type(7){-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}
+    #snowflake:nth-of-type(8){-webkit-animation-delay:1s,0s;animation-delay:1s,0s}
+    #snowflake:nth-of-type(9){-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+@keyframes tail{
+    from{
+        transform: translateY(0%) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(-25%) rotateZ(30deg);
+    }
+}
+@keyframes ear{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform:  rotateZ(-8deg);
+    }
+}
+@keyframes ball{
+    0%{
+        transform: rotateZ(20deg);
+    }
+    50%{
+        transform:  rotateZ(-20deg);
+    }
+    100%{
+        transform:  rotateZ(20deg);
+    }
+}
+
+
+
